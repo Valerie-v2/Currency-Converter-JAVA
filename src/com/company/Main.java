@@ -32,7 +32,6 @@ public class Main {
             firstCurrency = scan.nextLine().toLowerCase();
             System.out.println("TEST");
             System.out.println("Please insert the amount of money you want to convert: ");
-            firstAmount = scan.nextDouble();
             while (!scan.hasNextDouble()){
                 System.out.println("Please enter numbers only!");
                 System.out.println("Please insert the amount of money you want to convert: ");
