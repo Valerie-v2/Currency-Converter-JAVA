@@ -21,23 +21,24 @@ public class Main {
         //StandardCharsets charset = new StandardCharsets();
         Scanner scan = new Scanner(System.in);
         CharacterSymbols charSymbols = new CharacterSymbols();
-        String firstCurrency;
-        double firstAmount;
-        String secondCurrency;
-        double secondAmount;
+        String currencyGivenByUser;
+        double amountGivenByUser;
+        String convertedCurrency;
+        double convertedAmount;
         boolean program = true;
         while (program == true) {
             System.out.println("WELCOME TO THE CURRENCY CONVERTER! *JAVA*");
             System.out.println("Please insert the current currency (Euro, Pound, Dollar, Yen, Bitcoin): ");
-            firstCurrency = scan.nextLine().toLowerCase();
-            System.out.println("TEST");
-            System.out.println("Please insert the amount of money you want to convert: ");
-            while (!scan.hasNextDouble()){
-                System.out.println("Please enter numbers only!");
+            currencyGivenByUser = scan.nextLine().toLowerCase();
+            do {
                 System.out.println("Please insert the amount of money you want to convert: ");
-                //todo Dit even uitzoeken, vooral waarom continue zo anders werkt in Java... dafuq
-            }
-            System.out.println("QUE?!");
+                while (!scan.hasNextInt()) {
+                    System.out.println("Please insert numbers only!");
+                }
+                amountGivenByUser = scan.nextInt();
+            } while (amountGivenByUser > 0);
+
+            System.out.println("What is the currency you want to convert to? (Euro, Pound, Dollar, Yen, Bitcoin): ");
         }
     }
 }
